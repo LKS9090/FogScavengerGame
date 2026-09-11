@@ -1,0 +1,17 @@
+diff --git a/ml-agents-envs/setup.py b/ml-agents-envs/setup.py
+index 3fa6915..317c31a 100644
+--- a/ml-agents-envs/setup.py
++++ b/ml-agents-envs/setup.py
+@@ -60,10 +60,11 @@ setup(
+         "pyyaml>=3.1.0",
+         "gym>=0.21.0",
+         "pettingzoo==1.15.0",
+-        "numpy==1.21.2",
++        "numpy==1.23.5",
+         "filelock>=3.4.0",
+     ],
+     python_requires=">=3.10.1,<=3.10.12",
+     # TODO: Remove this once mypy stops having spurious setuptools issues.
+     cmdclass={"verify": VerifyVersionCommand},  # type: ignore
+ )
++

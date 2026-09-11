@@ -1,0 +1,1 @@
+PASS: exported model imported by Sentis 1.2; CPU execution on 100 fixed 8-value inputs returned 2 finite actions each.

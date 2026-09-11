@@ -1,0 +1,83 @@
+C:\Users\kanshan\anaconda3\envs\fog-mlagents\lib\site-packages\torch\__init__.py:1240: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\tensor\python_tensor.cpp:436.)
+  _C._set_default_tensor_type(t)
+C:\Users\kanshan\anaconda3\envs\fog-mlagents\lib\site-packages\torch\__init__.py:1240: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\tensor\python_tensor.cpp:436.)
+  _C._set_default_tensor_type(t)
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: 3DBall?team=0
+
+            ��  �Z
+        �W�Z�p���e  �����p�Z�Z
+    �W�Z�p������������  �p�����������p�Z
+ �Z�p�����������p�`        �]�p�����������Z�Z                               �[�[�[
+ �p�p�p�p�Z�����j�Z        �Z�p�����[�g�g�g�p      �c�g�g�p    �c�g�g�g             �`�`�`  �c�g�g
+ �p�p�p�p�p�p�p�p�Z���p�Z�Z�W�p�n���W�g�g�g�g�g�g�g�p      �c�g�g�p    �c�g�g�g �V�g�g�Z�[�g�g�g�[   �g�g�g �g�g�g�g�g�g �c�g�g�Z   �g�g�g
+ �p�p�p�p��  �]�p�p�p�p���W�g�g�g�a�`  �o�g�g�g�p      �c�g�g�p    �c�g�g�g �c�g�g�g�] �]�g�g�g  �g�g�g �]�c�g�g�`�]  �o�g�g  �c�g�g
+ �p�p�p�p��     �]�p�p�g�g      �o�g�g�g�p      �c�g�g�p    �c�g�g�g �c�g�g�p   �g�g�g  �g�g�g  �c�g�g     �g�g�g���g�g�`
+ �p�p�p�`       �p�p�g�g      �]�a�g�g�p      �]�g�g�g�[�Z�W�[�g�g�g�` �c�g�g�p   �g�g�g  �g�g�g  �c�g�g�j�W    �g�g�g�g�g
+ �]   �W�j�Z    �p�p�g�g   �W�[�[�Z            �]�a�g�g�g�g�a�`   �\�a�a�`   �a�a�a  �a�a�a   �]�g�g�g    �c�g�g�g
+   �m�p�p�p�p�p�p�j�j�p�p�g�g�[�g�g�g�g�g�g�g�a                                             �o�g�g�g�g
+      �]�p�p�p�p�p�p�p�g�g�g�g�g�g�a�`
+          �]�p�p�p�g�g�g�`
+             �]
+        
+ Version information:
+  ml-agents: 1.0.0,
+  ml-agents-envs: 1.0.0,
+  Communicator API: 1.5.0,
+  PyTorch: 2.7.1+cu128
+[INFO] Hyperparameters for behavior name 3DBall: 
+	trainer_type:	ppo
+	hyperparameters:	
+	  batch_size:	64
+	  buffer_size:	1024
+	  learning_rate:	0.0003
+	  beta:	0.001
+	  epsilon:	0.2
+	  lambd:	0.99
+	  num_epoch:	3
+	  shared_critic:	False
+	  learning_rate_schedule:	constant
+	  beta_schedule:	constant
+	  epsilon_schedule:	constant
+	checkpoint_interval:	4096
+	network_settings:	
+	  normalize:	True
+	  hidden_units:	128
+	  num_layers:	2
+	  vis_encode_type:	simple
+	  memory:	None
+	  goal_conditioning_type:	hyper
+	  deterministic:	False
+	reward_signals:	
+	  extrinsic:	
+	    gamma:	0.99
+	    strength:	1.0
+	    network_settings:	
+	      normalize:	False
+	      hidden_units:	128
+	      num_layers:	2
+	      vis_encode_type:	simple
+	      memory:	None
+	      goal_conditioning_type:	hyper
+	      deterministic:	False
+	init_path:	None
+	keep_checkpoints:	2
+	even_checkpoints:	False
+	max_steps:	8192
+	time_horizon:	64
+	summary_freq:	1024
+	threaded:	False
+	self_play:	None
+	behavioral_cloning:	None
+[INFO] 3DBall. Step: 1024. Time Elapsed: 6.836 s. Mean Reward: 1.302. Std of Reward: 0.603. Training.
+[INFO] 3DBall. Step: 2048. Time Elapsed: 7.881 s. Mean Reward: 1.305. Std of Reward: 0.641. Training.
+[INFO] 3DBall. Step: 3072. Time Elapsed: 8.766 s. Mean Reward: 1.393. Std of Reward: 0.990. Training.
+[INFO] 3DBall. Step: 4096. Time Elapsed: 9.622 s. Mean Reward: 1.510. Std of Reward: 1.162. Training.
+[INFO] Exported results\r21-gpu-smoke\3DBall\3DBall-4084.onnx
+[INFO] 3DBall. Step: 5120. Time Elapsed: 10.540 s. Mean Reward: 1.837. Std of Reward: 0.888. Training.
+[INFO] 3DBall. Step: 6144. Time Elapsed: 11.424 s. Mean Reward: 2.145. Std of Reward: 1.139. Training.
+[INFO] 3DBall. Step: 7168. Time Elapsed: 12.247 s. Mean Reward: 2.662. Std of Reward: 1.792. Training.
+[INFO] 3DBall. Step: 8192. Time Elapsed: 13.121 s. Mean Reward: 3.192. Std of Reward: 2.736. Training.
+[INFO] Exported results\r21-gpu-smoke\3DBall\3DBall-8158.onnx
+[INFO] Exported results\r21-gpu-smoke\3DBall\3DBall-8202.onnx
+[INFO] Copied results\r21-gpu-smoke\3DBall\3DBall-8202.onnx to results\r21-gpu-smoke\3DBall.onnx.

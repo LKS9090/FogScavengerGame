@@ -1,0 +1,5 @@
+Python: 3.10.12 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 19:01:18) [MSC v.1916 64 bit (AMD64)]
+Torch: 2.7.1+cu128
+NumPy: 1.23.5
+GPU: NVIDIA GeForce RTX 5080
+Final ONNX check: PASS
