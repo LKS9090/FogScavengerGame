@@ -1,0 +1,13 @@
+{
+    "passed": true,
+    "error": "",
+    "log": "C:/Users/kanshan/AppData/LocalLow/LKS9090/FogScavenger Switch Lab\\SwitchLogs\\session-20260912-133508-411.jsonl",
+    "configurations": 20,
+    "checks": [
+        "20 fixed configurations reset reproducibly and complete actual movement + stable switch hold without NavMesh; fixtures only, not teacher performance",
+        "Collider blocks commands into wall; 16 physical rays produce finite 28-dimensional observations",
+        "Action clamping, braking, interrupted hold reset and single success boundary verified",
+        "Timeout, invalid action and out-of-bounds have distinct outcomes",
+        "Ten consecutive resets clear action, velocity, hold, timer, collision count and terminal state"
+    ]
+}

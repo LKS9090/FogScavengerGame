@@ -64,7 +64,7 @@ public class P02World : MonoBehaviour
         // Visual roof hiding does not disable physical walls or perception occlusion.
         Roof.enabled = !Inside;
         Roof.GetComponent<Collider>().enabled = !Inside;
-        bool pressed = Vector3.Distance(Robot.transform.position,Plate.position) < 0.72f;
+        bool pressed = RobotPressureSwitch.IsPressed(Robot.transform.position,Plate.position);
         // Hold the gate open while either body occupies its threshold: no crushing/soft lock.
         bool threshold = InThreshold(Player.transform.position) || InThreshold(Robot.transform.position);
         SetDoor(pressed || threshold);

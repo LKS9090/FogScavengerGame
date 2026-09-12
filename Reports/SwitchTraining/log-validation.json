@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "records": 1987,
+  "valid_configurations": 20,
+  "events": {
+    "reset": 66,
+    "reset_interruption": 41,
+    "transition": 1856,
+    "success": 21,
+    "timeout": 1,
+    "invalid_action": 1,
+    "out_of_bounds": 1
+  }
+}

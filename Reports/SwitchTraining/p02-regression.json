@@ -1,0 +1,15 @@
+{
+    "passed": true,
+    "error": "",
+    "log": "C:/Users/kanshan/AppData/LocalLow/LKS9090/FogScavenger P02\\P02Logs\\session-20260912-133509-217.jsonl",
+    "checks": [
+        "Player climbs visible stairs and descends terrace ramp through actual controller",
+        "Player enters/exits lowland and crosses dry pool using opposite stair exits",
+        "Run speed exceeds walking; terrace edge blocks drops",
+        "Robot reaches terrace, lowland, pool bottom and opposite exterior using baked navigation",
+        "Follow preserves elevation and reaches player on high terrace",
+        "Closed gate blocks robot; pressure switch opens it; actual enter/pickup/return completes cooperation; roof restores and recall closes gate",
+        "Robot sensing enforces distance and solid-wall occlusion independently of hidden roof",
+        "Ten resets clear interactions, inventory, arrival choice, target, running and old paths; default follow restored"
+    ]
+}

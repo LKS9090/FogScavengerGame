@@ -1,0 +1,30 @@
+{
+  "environment": "switch-local-v1",
+  "motor": "capsule-motor-v1",
+  "behavior": "SwitchMotorV1",
+  "status": "environment validated; teacher collection and training not started",
+  "units": "metres, seconds, world X/Y/Z with Y up; robot position is feet",
+  "actions": {"continuous": 2, "fields": ["world_x", "world_z"], "range": [-1, 1], "normalization": "clamp each axis then clamp vector length to 1"},
+  "physics_seconds": 0.02,
+  "decision_period_physics_steps": 5,
+  "repeat_action_between_decisions": true,
+  "motor_parameters": {"height": 1.2, "radius": 0.35, "maximum_speed": 6.5, "acceleration": 18, "angular_speed_degrees": 540, "step_offset": 0.3, "slope_limit_degrees": 45},
+  "success": {"switch_activation_distance": 0.72, "maximum_horizontal_speed": 0.15, "continuous_hold_seconds": 3},
+  "time_limit_seconds": 15,
+  "terminal": {"success": 1, "out_of_bounds": -1, "invalid_action": -1},
+  "truncation": {"timeout": 0},
+  "intermediate_reward": 0,
+  "observation_count": 28,
+  "observations": [
+    {"indices": [0, 1, 2], "fields": ["relative_goal_x", "relative_goal_y", "relative_goal_z"], "divide_by": [12, 3, 12], "clip": [-1, 1]},
+    {"indices": [3, 4], "fields": ["actual_velocity_x", "actual_velocity_z"], "divide_by": 6.5},
+    {"indices": [5, 6], "fields": ["previous_applied_action_x", "previous_applied_action_z"]},
+    {"indices": [7], "fields": ["switch_pressed"], "values": [0, 1]},
+    {"indices": [8], "fields": ["continuous_stable_hold"], "divide_by": 3, "clip": [0, 1]},
+    {"indices": [9], "fields": ["elapsed"], "divide_by": 15, "clip": [0, 1]},
+    {"indices": [10, 11], "fields": ["motor_requested_velocity_x", "motor_requested_velocity_z"], "divide_by": 6.5},
+    {"indices": [12, 27], "fields": ["16_ray_distances"], "index_semantics": "inclusive index range", "ray_origin_height": 0.6, "start_direction": "+Z", "clockwise_increment_degrees": 22.5, "divide_by": 8, "no_hit": 1, "physics_layer": 9}
+  ],
+  "configuration_ids": {"initial_training_candidates": [0, 15], "reserved": [16, 19], "index_semantics": "inclusive ranges; all receive environment validity tests, none used for model selection yet"},
+  "limitations": ["flat ground only", "one robot and one known goal", "no NavMesh assistance", "no vision model or natural language model", "P02 still uses its existing rule navigation", "new capsule motor requires later gameplay integration validation"]
+}
