@@ -13,6 +13,7 @@ public class RobotCompanion : MonoBehaviour
     public int CommandId { get; private set; }
     public event Action<string> StateChanged;
     public Transform Player;
+    public bool FollowPlayerElevation;
     float nextPlan;
     float stalledTime;
     Vector3 lastPosition;
@@ -91,7 +92,7 @@ public class RobotCompanion : MonoBehaviour
         {
             nextPlan = Time.time + 0.2f;
             Goal = Player.position;
-            Goal = new Vector3(Goal.x, 0, Goal.z);
+            Goal = new Vector3(Goal.x, FollowPlayerElevation ? Goal.y - 1f : 0, Goal.z);
             float distance = Vector3.Distance(transform.position, Goal);
             if (distance < 1.7f)
             {

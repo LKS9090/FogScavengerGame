@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "records": 426,
+  "events": {
+    "robot_state": 40,
+    "reset": 12,
+    "observation": 336,
+    "command_wait": 3,
+    "command_goto": 15,
+    "command_follow": 2,
+    "episode_end": 11,
+    "interaction_failed": 2,
+    "command_rejected": 1,
+    "gate_open": 1,
+    "item_collected": 1,
+    "task_complete": 1,
+    "gate_closed": 1
+  }
+}
