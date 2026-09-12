@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "behavior": "SwitchMotorV1?team=0",
+  "observation_count": 28,
+  "continuous_actions": 2,
+  "trained_model": false,
+  "checks": [
+    "Real Unity handshake exposes 28 observations and 2 continuous actions",
+    "Zero actions produce a genuine time-limit truncation, not success",
+    "Python-issued movement really reaches and holds the switch; success terminal reward is 1",
+    "Ten Python resets clear motion and hold; first returned observation is at most one 20ms physics tick after reset"
+  ]
+}

@@ -22,6 +22,7 @@ public class SwitchTrainingAgent : Agent
     public string LastOutcome {get;private set;}="none";
     public string LogPath {get;private set;}
     public bool AcceptanceMode;
+    public bool TeacherControl {get;private set;}
     public bool EpisodeEnded => ending;
     public bool ResetInvariantPassed {get;private set;}
     public int ManualConfiguration;
@@ -37,6 +38,11 @@ public class SwitchTrainingAgent : Agent
         Time.fixedDeltaTime=StepSeconds;
         AcceptanceMode=Array.IndexOf(Environment.GetCommandLineArgs(),"--switch-self-test")>=0;
         if(AcceptanceMode) { Academy.Instance.AutomaticSteppingEnabled=false; gameObject.AddComponent<SwitchEnvironmentAcceptance>(); }
+        if(Array.IndexOf(Environment.GetCommandLineArgs(),"--teacher-collect")>=0) {
+            AcceptanceMode=true; Academy.Instance.AutomaticSteppingEnabled=false;
+            gameObject.AddComponent<SwitchTeacherCollection>();
+        }
+        TeacherControl=Array.IndexOf(Environment.GetCommandLineArgs(),"--teacher-demo")>=0;
         string dir=Path.Combine(Application.persistentDataPath,"SwitchLogs"); Directory.CreateDirectory(dir);
         LogPath=Path.Combine(dir,"session-"+DateTime.UtcNow.ToString("yyyyMMdd-HHmmss-fff")+".jsonl");
         log=new StreamWriter(LogPath,false,new UTF8Encoding(false)){AutoFlush=true};
@@ -108,6 +114,10 @@ public class SwitchTrainingAgent : Agent
     }
     public override void Heuristic(in ActionBuffers actions)
     {
+        if(TeacherControl) {
+            var teacher=SwitchRuleTeacher.Decide(Observe());
+            var controls=actions.ContinuousActions; controls[0]=teacher.x; controls[1]=teacher.y; return;
+        }
         // Keyboard movement is screen relative; the shared action protocol itself is world X/Z.
         var forward=Vector3.ProjectOnPlane(View.transform.forward,Vector3.up).normalized;
         var right=Vector3.ProjectOnPlane(View.transform.right,Vector3.up).normalized;
@@ -119,6 +129,7 @@ public class SwitchTrainingAgent : Agent
     {
         if(AcceptanceMode || Academy.Instance.IsCommunicatorOn) return;
         if(Input.GetKeyDown(KeyCode.R)) EndEpisode();
+        if(Input.GetKeyDown(KeyCode.T)) {TeacherControl=!TeacherControl; EndEpisode();}
         if(Input.GetKeyDown(KeyCode.N)) {ManualConfiguration=(ManualConfiguration+1)%20; EndEpisode();}
         if(Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
     }
@@ -146,11 +157,11 @@ public class SwitchTrainingAgent : Agent
             background=new Texture2D(1,1); background.SetPixel(0,0,new Color(.03f,.045f,.06f,.9f)); background.Apply();
         }
         GUI.DrawTexture(new Rect(16,16,440,200),background);
-        GUI.Label(new Rect(30,28,420,40),"动作训练场 · 环境验证",title);
-        GUI.Label(new Rect(30,72,415,45),"移动到黄色开关，停稳并保持 3 秒\n当前控制："+(Academy.Instance.IsCommunicatorOn?"Python 接口":"键盘遥操作（没有训练模型）"),text);
+        GUI.Label(new Rect(30,28,420,40),"动作训练场 · 规则教师",title);
+        GUI.Label(new Rect(30,72,415,45),"移动到黄色开关，停稳并保持 3 秒\n当前控制："+(Academy.Instance.IsCommunicatorOn?"Python 接口":TeacherControl?"规则教师（代码控制，未训练）":"键盘遥操作（没有训练模型）"),text);
         GUI.Label(new Rect(30,125,415,76),"配置 "+Configuration+"  ·  回合 "+Episode+"  ·  时间 "+Elapsed.ToString("F1")+" / 15 秒\n压住："+(Pressed?"是":"否")+"  稳定保持："+Hold.ToString("F1")+" 秒\n上次结果："+LastOutcome,text);
         GUI.DrawTexture(new Rect(0,754,1280,46),background);
-        GUI.Label(new Rect(25,762,1220,34),"WASD 控制蓝色机器人  ·  松开减速停止  ·  R 重置  ·  N 下一个配置  ·  Esc 退出",text);
+        GUI.Label(new Rect(25,762,1220,34),"T 切换教师 / 手动  ·  WASD 手动移动  ·  R 重置  ·  N 下一个配置  ·  Esc 退出",text);
     }
     void OnApplicationQuit(){log?.Dispose(); log=null;}
 }

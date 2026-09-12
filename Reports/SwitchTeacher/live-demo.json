@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "mode": "real standalone Heuristic / Academy decisions",
+  "successes": [
+    {
+      "configuration": 0,
+      "elapsed": 7.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 0,
+      "elapsed": 7.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 0,
+      "elapsed": 7.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 0,
+      "elapsed": 7.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.440000057220459,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 1,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 2,
+      "elapsed": 7.279999732971191,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 2,
+      "elapsed": 7.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 3,
+      "elapsed": 7.419999599456787,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 3,
+      "elapsed": 7.399999618530273,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 4,
+      "elapsed": 8.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    },
+    {
+      "configuration": 4,
+      "elapsed": 8.199999809265137,
+      "hold": 2.999997854232788,
+      "collision_steps": 0
+    }
+  ],
+  "source_log": "C:\\Users\\kanshan\\AppData\\LocalLow\\LKS9090\\FogScavenger Switch Lab\\SwitchLogs\\session-20260912-152029-280.jsonl",
+  "ui_checks": [
+    "Teacher mode visible",
+    "N switches configurations",
+    "T switches to manual and resets",
+    "T switches back to teacher and resets"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "counts": {
+    "train": {
+      "episodes": 192,
+      "samples": 15347
+    },
+    "validation": {
+      "episodes": 64,
+      "samples": 5121
+    }
+  },
+  "checks": [
+    "finite 28/2 vectors",
+    "pre-action pairing and temporal continuity",
+    "10Hz decisions / 50Hz actual movement",
+    "applied action matches label",
+    "zero state at every reset",
+    "whole-episode train/validation split",
+    "reserved configurations 16-19 absent",
+    "success, hold, speed and zero collisions"
+  ],
+  "trained_model": false
+}

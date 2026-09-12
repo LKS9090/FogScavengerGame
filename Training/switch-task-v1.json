@@ -2,7 +2,7 @@
   "environment": "switch-local-v1",
   "motor": "capsule-motor-v1",
   "behavior": "SwitchMotorV1",
-  "status": "environment validated; teacher collection and training not started",
+  "status": "environment and ray-steering-v1 teacher validated; demonstrations collected; neural model training not started",
   "units": "metres, seconds, world X/Y/Z with Y up; robot position is feet",
   "actions": {"continuous": 2, "fields": ["world_x", "world_z"], "range": [-1, 1], "normalization": "clamp each axis then clamp vector length to 1"},
   "physics_seconds": 0.02,

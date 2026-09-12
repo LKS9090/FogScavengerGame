@@ -1,0 +1,35 @@
+{
+  "validation_episodes": 64,
+  "training_samples": 15347,
+  "validation_samples": 5121,
+  "environment": "switch-local-v1",
+  "motor": "capsule-motor-v1",
+  "training_episodes": 192,
+  "teacher": "ray-steering-v1",
+  "files": [
+    {
+      "sha256": "7C626F061D06E340AA857028ECAF2FA9A267CCCF8A57E66A326E44DA54DCD6C4",
+      "path": "Assets/Scripts/Training/SwitchRuleTeacher.cs"
+    },
+    {
+      "sha256": "05806B41617A2931D5648474E56715D5F7FB5518D39C1B29275551D13801935D",
+      "path": "Assets/Scripts/Training/SwitchTeacherCollection.cs"
+    },
+    {
+      "sha256": "107433802638F1BF8A5BC5C6CD07AC3B22A687CB127883070A6D933EC04B87BE",
+      "path": "Assets/Scripts/Training/SwitchTrainingAgent.cs"
+    },
+    {
+      "sha256": "0478A1A5757E14ABFFB2849E3F71A20009DB119B1BC969AF128E73CAE7BF13D5",
+      "path": "Training/Data/SwitchTeacher-v1/train.jsonl"
+    },
+    {
+      "sha256": "E876C9F95C7B7CEA9EF55DE8A32E65EA7A8B4A588ED60A573A0CC9F8821080D4",
+      "path": "Training/Data/SwitchTeacher-v1/validation.jsonl"
+    },
+    {
+      "sha256": "D28904EF02A36B8BBBB405C698F3EF3145022E730E15388CBB2107BC04BB9299",
+      "path": "Training/Datasets/switch-teacher-v1.zip"
+    }
+  ]
+}
