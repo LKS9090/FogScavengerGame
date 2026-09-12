@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "records": 125,
+  "resets_including_start": 11,
+  "commands": [
+    "command_follow",
+    "command_goto",
+    "command_rejected",
+    "command_wait"
+  ]
+}

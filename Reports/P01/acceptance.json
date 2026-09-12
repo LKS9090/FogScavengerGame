@@ -1,0 +1,13 @@
+{
+    "passed": true,
+    "error": "",
+    "log": "C:/Users/kanshan/AppData/LocalLow/LKS9090/FogScavenger P01\\P01Logs\\session-20260912-110459-259.jsonl",
+    "checks": [
+        "Player moves, stops at wall; robot independently waits",
+        "Follow routes around static wall and stops near player",
+        "Wait cancellation, GoTo arrival, unreachable goal feedback",
+        "Controlled actuator stall produces blocked feedback and recovers when restored",
+        "Recall replaces active GoTo command",
+        "10 consecutive resets clear positions, commands, path, velocity, input and marker; no delayed restart"
+    ]
+}
